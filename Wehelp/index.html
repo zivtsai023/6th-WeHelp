@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Castoro+Titling&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Ziv-Introduce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <!--網頁樣式-->
+        <div class="transition-body">
+            <!--網頁範圍-->
+            <div id="header">
+                <!--導覽列區塊:導覽anchor+項目items--><!--在此部分比較CSS與Bootstrap的不同程式代碼-->
+                <div class="header__stricky-wrapper" data-sticky="true" data-overlay="false">
+                    <!--置頂導覽列-->
+                    <div class="header__stricky-wrapper--row">
+                        <!--置頂列-行內容-->
+                        <div class="header__stricky-wrapper--col">
+                            <!--置頂列-列內容-->
+                            <div class="header__stricky-wrapper--layout">
+                                <!--置頂列-各區塊樣式-->
+                                <div class="stricky-wrapper--left">
+                                    <div class="burgerlist--icon">
+                                        <!--菜單: button + icon + fallbacktext-->
+                                        <!--<button type="button">-->
+                                        <svg id=svg_burgerlistIcon xmlns="http://www.w3.org/2000/svg" width="255"
+                                            height="255" viewBox="0 0 255 255" aria-label="圖示加載失敗，請稍後重試。" role="img">
+                                            <defs>
+                                                <style>
+                                                    .\32 6467c0d-0c5f-4e06-a42b-d70836ad82ea {
+                                                        fill: #fff;
+                                                    }
+
+                                                    .\35 923b9d1-94f3-48f1-80c1-6fd81ac7bc0e,
+                                                    .acad97d8-2774-499b-8f42-c1959313c424 {
+                                                        fill: none;
+                                                        stroke: #fff;
+                                                        stroke-linecap: round;
+                                                        stroke-linejoin: round;
+                                                    }
+
+                                                    .\35 923b9d1-94f3-48f1-80c1-6fd81ac7bc0e {
+                                                        stroke-width: 9.87px;
+                                                    }
+
+                                                    .acad97d8-2774-499b-8f42-c1959313c424 {
+                                                        stroke-width: 10px;
+                                                    }
+                                                </style>
+                                            </defs>
+                                            <title>icon-svg</title>
+                                            <g id="26a218e0-9874-47c1-b411-872ab9b5c274" data-name="burgerList_wline">
+                                                <g>
+                                                    <path class="26467c0d-0c5f-4e06-a42b-d70836ad82ea"
+                                                        d="M128.81,9.58A118,118,0,0,1,212.25,211,118,118,0,0,1,45.37,44.14,117.26,117.26,0,0,1,128.81,9.58m0-10a128,128,0,1,0,128,128,128,128,0,0,0-128-128Z" />
+                                                    <line class="5923b9d1-94f3-48f1-80c1-6fd81ac7bc0e" x1="84.88"
+                                                        y1="93.5" x2="209.88" y2="93.5" />
+                                                    <line class="acad97d8-2774-499b-8f42-c1959313c424" x1="47.71"
+                                                        y1="93.5" x2="67.71" y2="93.5" />
+                                                    <line class="5923b9d1-94f3-48f1-80c1-6fd81ac7bc0e" x1="85.69"
+                                                        y1="127.58" x2="210.69" y2="127.58" />
+                                                    <line class="acad97d8-2774-499b-8f42-c1959313c424" x1="48.52"
+                                                        y1="127.58" x2="68.52" y2="127.58" />
+                                                    <line class="5923b9d1-94f3-48f1-80c1-6fd81ac7bc0e" x1="85.69"
+                                                        y1="161.67" x2="210.69" y2="161.67" />
+                                                    <line class="acad97d8-2774-499b-8f42-c1959313c424" x1="48.52"
+                                                        y1="161.67" x2="68.52" y2="161.67" />
+                                                    <g>
+                                                        <path class="26467c0d-0c5f-4e06-a42b-d70836ad82ea"
+                                                            d="M127.55,9.58A118,118,0,0,1,211,211,118,118,0,1,1,44.12,44.14,117.24,117.24,0,0,1,127.55,9.58m0-10a128,128,0,1,0,128,128,128,128,0,0,0-128-128Z" />
+                                                        <line class="5923b9d1-94f3-48f1-80c1-6fd81ac7bc0e" x1="84.43"
+                                                            y1="93.5" x2="209.43" y2="93.5" />
+                                                        <line class="acad97d8-2774-499b-8f42-c1959313c424" x1="47.26"
+                                                            y1="93.5" x2="67.26" y2="93.5" />
+                                                        <line class="5923b9d1-94f3-48f1-80c1-6fd81ac7bc0e" x1="84.43"
+                                                            y1="127.58" x2="209.43" y2="127.58" />
+                                                        <line class="acad97d8-2774-499b-8f42-c1959313c424" x1="47.26"
+                                                            y1="127.58" x2="67.26" y2="127.58" />
+                                                        <line class="5923b9d1-94f3-48f1-80c1-6fd81ac7bc0e" x1="84.43"
+                                                            y1="161.67" x2="209.43" y2="161.67" />
+                                                        <line class="acad97d8-2774-499b-8f42-c1959313c424" x1="47.26"
+                                                            y1="161.67" x2="67.26" y2="161.67" />
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="header-item--logo">
+                                        <!--personal logo-->
+                                        <a href="">
+                                            <div>
+                                                <img src="indexSvg\ziv_icon_white.svg" alt="It's a personal icon">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="header-item--textcenter">
+                                    <!--*尚未添加自動換行-->
+                                    <!--中間內容-->
+                                    <ul class="header-item--list">
+                                        <li class="header-item--list">
+                                            <a href="#Q1">簡介動機</a>
+                                        </li>
+                                        <li class="header-item--list">
+                                            <a href="#Q3">學習規劃</a>
+                                        </li>
+                                        <li class="header-item--list">
+                                            <a href="#Q6">負面經歷</a>
+                                        </li>
+                                        <li class="header-item--list">
+                                            <a href="#Q7">學習心得</a>
+                                        </li>
+                                        <li class="header-item--list">
+                                            <a href="#Q8">價值觀念</a>
+                                        </li>
+                                        <li class="header-item--list">
+                                            <a href="#Q10">Say to Wehelp</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="header-item--right">
+                                    <div class="personCount">
+                                        <div>Page Viwer:</div>
+                                        <div id="viewerCount">0</div>
+                                    </div> <!--右側按鈕-功能icon待定-->
+                                </div>
+                            </div>
+                        </div>　
+                    </div>
+                </div>
+            </div>
+            <div class="marquee-container">
+                <!--跑馬燈容器範圍-->
+                <div class="marquee-text">ZIV CRRRICULUM VITAE WEBSIDE　|　6TH WEHELP BOOTCAMP! 履歷網頁</div>
+                <!--跑馬燈內容-->
+            </div>
+            <div id="heroImage"> <!--主要內容-->
+                <div class="heroImage-slideshow"> <!--Heroimage主題大圖 Slideshow幻燈片放映／幻燈片佈局-->
+                    <div id="heroImage-slideshow" class="heroImage-slideshow-scope" data-natural="true"
+                        data-mobile-natural="true" data-autoplay="true" data-speed="18000" data-arrows="true"
+                        data-slide-count="5" tabindex="0">
+                        <!--幻燈片的內容範圍 + 輪播設定-->
+                        <!--natural=true 圖片維持原樣／autoplay=true 自動輪播／speed 速率（毫秒）／arrows=true 顯示左右切換箭頭／ slide-count=5 輪播圖片總數／ tabindex="0"可以被聚焦與tab鍵作用-->
+                        <div class="flickity-viewport">
+                            <!--style="touch-action: pan-y;"-->
+                            <!--輪播全視窗 + 拖曳固定於Y軸(會配合JS使用) -->
+                            <div class="flickity-slider">
+                                <!--移動後的位置 style="position:absolute; left: -50%;" aria-hidden="true"-->
+                                <div class="hero__item">
+                                    <div class="hero__image-wrapper">
+                                        <!--移動前的位置-- ::before-->
+                                        <img src="indexImg/IMG_2506.jpg">
+                                    </div>
+                                    <div class="hero__image-text">
+                                        <!--圖在下層文字在上層／文字圖層-->
+                                        <!--文字布局-->
+                                        <div class="heroText-type">
+                                            <!--左右文字布局-->
+                                            <div class="heroText-content">
+                                                <!--文字上下佈局-->
+                                                <div class="text__title">TTITLE 01. 給30歲的自己</div>
+                                                <hr>
+                                                <div class="text__content">
+                                                    <p>
+                                                        到了30歲，至今有3年時間在平面設計與4年企劃經歷，自己兼職接案也大約5年，這2~3年一直在思考關於設計的未來。
+                                                    </p>
+                                                    <p>
+                                                        這幾年APP與影音產業蓬勃，持續創新的應用程式體驗，也影響設計行業的生態。以前的想法是單純從事設計職務，經過這些年思考，到了30歲的年紀，反倒逐漸重視在如何創造價值。
+                                                    </p>
+                                                    <p>
+                                                        選擇學習程式技術，一方面規劃未來從事開發應用體驗，另一方面曾經的設計經驗，能作為附加價值相輔相成有所發揮。
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="hero__item">
+                                    <div class="hero__image-wrapper">
+                                        <!--移動前的位置-- ::before-->
+                                        <img src="indexImg\IMG_2688.JPG">
+                                    </div>
+                                    <div class="hero__image-text">
+                                        <!--圖在下層文字在上層／文字圖層-->
+                                        <!--文字布局-->
+                                        <div class="heroText-type">
+                                            <!--左右文字布局-->
+                                            <div class="heroText-content">
+                                                <!--文字上下佈局-->
+                                                <div class="text__title">TTITLE 02. 想開發的有趣應用</div>
+                                                <hr>
+                                                <div class="text__content">
+                                                    <p>
+                                                        創新的應用產品產出，多半源自解決生活難題，近年與室內設計合作，現代住宅強調智慧家庭，對於如何能「創造空間體驗」感興趣，自己在工作時，也習慣透過音樂、熱飲等環境營造，除了能減少煩躁感，也能專注於當下作業。
+                                                    </p>
+                                                    <p>
+                                                        營造環境的因素很多－當下的情緒、自身的喜好、個人習慣，都是影響的因素，目前想法是主要以工作事項（工作清單）為主，透過背景音樂（包含情緒索引、番茄鐘設置），工作前的準備引導（準備一杯飲品、設置個人儀式感...等），創造專注工作的環境，作為產品開發的雛形。
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="hero__item">
+                                    <div class="hero__image-wrapper">
+                                        <!--移動前的位置-- ::before-->
+                                        <img src="indexImg\20211003_162745.jpg">
+                                    </div>
+                                    <div class="hero__image-text">
+                                        <!--圖在下層文字在上層／文字圖層-->
+                                        <!--文字布局-->
+                                        <div class="heroText-type">
+                                            <!--左右文字布局-->
+                                            <div class="heroText-content">
+                                                <!--文字上下佈局-->
+                                                <div class="text__title">TTITLE 03. 未來藍圖與規劃</div>
+                                                <hr>
+                                                <div class="text__content">
+                                                    <ul>
+                                                        <li>短期：1年之內
+                                                            <p>
+                                                                職涯目標：電商平台／品牌整合企業前端設計師
+                                                                規劃安排：主要學習前端技術框架、維護，與程式碼優化
+                                                                考慮到入門門檻與經驗，會以電商／品牌整合企業作為目標領域，除了能透過平台延伸了解金流運作，或與不同產業接觸，最主要以前端技能作為主要職務，對於前端能更快理解。
+                                                            </p>
+                                                        </li>
+                                                        <hr>
+                                                        <li>中期：2~3年
+                                                            <p>
+                                                                職涯目標：交互互動媒體產業的前端工程師
+                                                                規劃安排：學習APP應用與前端交互技術，後端技術的學習補足
+                                                                互動媒體會接觸到更多不同的技術，也更磨練對前端框架的維護與應用，也因為與常見技術不同，需要開發與撰寫的能力，對於後端的合作與理解也更深入。
+                                                            </p>
+                                                        </li>
+                                                        <hr>
+                                                        <li>長期：3~5年
+                                                            <p>
+                                                                職涯目標：創新公司的應用開發工程師
+                                                                規劃安排：研發應用與開發技術的全端經驗
+                                                                規劃安排：創新公司會經歷從零開始的整體開發經驗，與不同產業合作，接觸彤彤的視野擴展格局。
+                                                            </p>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="hero__item">
+                                    <div class="hero__image-wrapper">
+                                        <!--移動前的位置-- ::before-->
+                                        <img src="indexImg\20211002_151155.jpg">
+                                    </div>
+                                    <div class="hero__image-text">
+                                        <!--圖在下層文字在上層／文字圖層-->
+                                        <!--文字布局-->
+                                        <div class="heroText-type">
+                                            <!--左右文字布局-->
+                                            <div class="heroText-content">
+                                                <!--文字上下佈局-->
+                                                <div class="text__title">TTITLE 04. 想說的話</div>
+                                                <hr>
+                                                <div class="text__content">
+                                                    <p>
+                                                        或許正是因為年齡已經奔三，思考人生下一步的規劃，論壇與網評看了很多，引用評論所說：「每過3個月，程式學習的難度就會翻倍。」－ChatGPT工具研發就是最好的證明。
+                                                    </p>
+                                                    <p>
+                                                        就30歲以程式而言，我認為已有些晚，正因如此，才要起身行動，積極踏入未來藍圖的規劃。
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script src="script.js" defer></script>
+                        <button id="prevButton" class="flickity-prev-button" type="button" aria-label="Previous">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 50 50">
+                                <polyline fill="none" stroke="#231815" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2.94" points="33.5 6.5 15.5 24.5 33.5 42.5" />
+                            </svg>
+                            </svg>
+                        </button>
+                        <button id="nextButton" class="flickity-next-button" type="button" aria-label="Previous">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 50 50">
+                                <polyline fill="none" stroke="#231815" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2.94" points="15.5 6.5 33.5 24.5 15.5 42.5" />
+                            </svg>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="container">
+                <!--QA1布局-->
+                　<div class="container__background bg1"></div>
+                <div class="container__outer">
+                    <div class="container__item">
+                        <!--QA1內容布局-->
+                        <div class="container__text--title">
+                            <!--QA1邊界-->
+                            <h1 id="Q1">Question 01 | 自我介紹與學習動機</h1>
+                        </div>
+                        <hr>
+                        <div class="container__text--contents">
+                            <div class="content">
+                                <p>我的中文名是蔡丞號，英文名稱為Ziv，目前是一名自由接案設計師，需要與客戶或使用者互動，了解客戶的問題與痛點。</p>
+                                <p>了解前端是從1年前開始，透過當時配合的室內設計公司，接觸到住宅的IoT智慧互動，後來有幸與影片工作室合作，淺識行銷平台上，關於SEO、演算法的機制。
+                                </p>
+                                <p>
+                                    從中發現「诶！如果可以學會程式，結合設計有很多可能性！」慢慢從前端開始了解，其中的互動性與創造性與設計很像，解決問題創造體驗，是學習程式的原因。</p>
+                            </div>
+                        </div>
+                        <a href="index.html"><button class="homekey" a href="index.html">Go to Top</button></a>
+                    </div>
+                    <div class="container__space"></div>
+                </div>
+            </div>
+            <div class="container">
+                <!--QA1布局-->
+                　<div class="container__background bg2"></div>
+                <div class="container__outer">
+                    <div class="container__item">
+                        <!--QA1內容布局-->
+                        <div class="container__text--title">
+                            <!--QA1邊界-->
+                            <h1>Question 02 | 申請動機與原因</h1>
+                        </div>
+                        <hr>
+                        <div class="container__text--contents">
+                            <div class="content">
+                                <p>從一開始兼職學習，到現在幾乎全職，約8個月時間，字學過程磕磕碰碰，技術工具的多元廣泛，常有瞎子摸象的感覺，然而一路從純文字網站練習－逐漸加入CSS與微動畫－開始摸索JavaScript互動與框架，有逐步前進的成就。
+                                </p>
+                                <p>上次申請時，是希望有系統性的學習框架，逐步建立學習概念。在自學的過程，階段與想法也在改變，此次有以下的申請動機：
+                                </p>
+                                <ul>
+                                    <li>了解自學方向與規劃，與產業所需方向的差異。</li>
+                                    <li>實際經歷完整的實際開發網頁的實作經驗。</li>
+                                    <li>清晰工程師職務的標準與具備的思考邏輯。</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="index.html"><button class="homekey" a href="index.html">Go to Top</button></a>
+                    </div>
+                    <div class="container__space"></div>
+                </div>
+            </div>
+            <div class="container">
+                <!--QA1布局-->
+                <div class="container__background bg3"></div>
+                <div class="container__itemQ3">
+                    <!--QA1內容布局-->
+                    <div class="container__text--title">
+                        <!--QA1邊界-->
+                        <h1 id="Q3">Question 03 | 曾做過的軟體技術相關學習?</h1>
+                    </div>
+                    <div class="container__cards">
+                        <div class="cards--content">
+                            <div class="cards--title">CSS LEARNING</div>
+                            <hr>
+                            <div class="cards--text">
+                                <div>資源：Udemy、IT論壇文章</div>
+                                <div>學習：CSS基礎、版型樣式、RWD佈局</div>
+                                <hr>
+                                <div>各類CSS版型練習：</div>
+                                <ul>
+                                    <li>滿版圖文（左文右圖）</li>
+                                    <li>CSS偽類動畫</li>
+                                    <li>左右排版對話框</li>
+                                </ul>
+                            </div>
+                            <button><a href="Self-introduction.html">第5屆 Wehelp 履歷連結</a></button>
+                        </div>
+                        <div class="cards--content">
+                            <div class="cards--title">JS LEARNING</div>
+                            <hr>
+                            <div class="cards--text">
+                                <div>資源：Udemy、IT論壇文章</div>
+                                <div>學習：JS基礎語法、簡單互動、邏輯撰寫</div>
+                                <hr>
+                                <div>JS應用小互動：</div>
+                                <ul>
+                                    <li>廣告輪播：<br>JS showSlide組件. 框架控制
+                                    </li>
+                                    <li>區塊顏色改變：<br>動態事件練習- selectedColor. addEventListener</li>
+                                    <li>文字跑馬燈：<br>動態事件練習- scrollMarquee. addEventListener
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cards--content">
+                            <div class="cards--title">Framework LEARNING</div>
+                            <hr>
+                            <div class="cards--text">
+                                <div>資源：IT論壇文章、分析實際網頁</div>
+                                <div>學習：認識框架，透過Google DevTool分析網頁並模仿練習</div>
+                                <hr>
+                                <div>練習應用：</div>
+                                <ul>
+                                    <li>透過HTML data-標籤與DOM API配置驅動，提高程式維護性
+                                    </li>
+                                    <li>
+                                        Rule JS簡化管理內容樣式
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="index.html"><button class="homekey" a href="index.html">Go to Top</button></a>
+                </div>
+            </div>
+            <div class="container">
+                <!--QA1布局-->
+                <div class="container__background bg4"></div>
+                <div class="container__itemQ3">
+                    <!--QA1內容布局-->
+                    <div class="container__text--title">
+                        <!--QA1邊界-->
+                        <h1>Question 04 | 我會怎麼規劃學習方式</h1>
+                    </div>
+                    <div class="container__cards">
+                        <div class="study--img">
+                            <img id="book" src="indexImg\.trashed-1651462827-IMG_3195.jpg">
+                        </div>
+                        <div class="study--schedule">
+                            <div class="study--schedule-title">每日行程規劃</div>
+                            <ul class="study--schedule-text">
+                                <li>早上 ( 3-5小時 )－學習內容</li>
+                                <li>下午 ( 2-4小時 )－練習與延伸學習</li>
+                                <li>晚上 ( 2小時 )－第一階段網站製作</li>
+                            </ul>
+                            <hr>
+                            <div class="study--schedule-title">每周行程規劃</div>
+                            <div class="study--schedule-text">依據每週目標與預期進度設置小目標：
+                                <ul>
+                                    <li>學習內容：學習／複習技術，統整筆記後產出分享文章</li>
+                                    <li>目標練習：實作練習的小成果</li>
+                                    <li>周進度：大階段產出做準備</li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div class="study--schedule-title">第一階段第一周為例，初擬週學習規劃表</div>
+                            <div class="study--schedule-text">第一周：HTML、CSS 基礎與 RWD 切版實務
+                                <ul>
+                                    <ul>學習內容：
+                                        <li>CSS 選擇器、盒模型、定位方式</li>
+                                        <li>Flexbox 與 Grid 佈局</li>
+                                        <li>RWD響應式練習</li>
+                                    </ul>
+                                    <ul>目標練習：找一個實際網站，練習切版與RWD響應
+                                    </ul>
+                                    <ul>周進度：第一階段專案初階佈局</ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="index.html"><button class="homekey" a href="index.html">Go to Top</button></a>
+                </div>
+            </div>
+            <div class="container">
+                <!--QA1布局-->
+                <div class="container__background bg5"></div>
+                <div class="container__itemQ3">
+                    <!--QA1內容布局-->
+                    <div class="container__text--title">
+                        <!--QA1邊界-->
+                        <h1>Question 05 | 軟體技術日新月異，如何確定選擇領域是正確有回報的?</h1>
+                    </div>
+                    <div class="container__cards">
+                        <div class="cards--content">
+                            <div class="cards--title">領域與產業的思考</div>
+                            <hr>
+                            <div class="cards--text">
+                                <ul>
+                                    <li>所屬的產業市場：
+                                        <br>
+                                        <div>
+                                            技術是服務於產業，各產業的對程式的需求性與所屬應用技術。<br>
+                                            例如：<br>
+                                            餐飲場業的Flutter點餐系統，或是行銷電商的串接金流支付、銀行的金融系統等。<br>
+                                            所以分析產業能了解當前趨勢與技術方向。
+                                        </div>
+                                    </li>
+                                    <hr>
+                                    <li>剛需需求與多樣性：<br>
+                                        二是程式技術在領域中的地位與角色，傳統產業需求小於餐飲與電商，餐飲與電商需求小於軟體科技業，考慮該技術在產業內需求與個人興趣，就能有大致方向。
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cards--content">
+                            <div class="cards--title">領域與技術特性</div>
+                            <hr>
+                            <div class="cards--text">
+                                <ul>
+                                    <li>領域中的發展性：
+                                        <br>
+                                        <div>
+                                            各產業都會有其高、中、初級職務，各個門檻與需求都不同，也可知道選擇行業的上下限與技術發展性。
+                                        </div>
+                                    </li>
+                                    <hr>
+                                    <li>技術的通用性：
+                                        <br>
+                                        <div>
+                                            依照各職業職級需求技能與標準，來判斷技術需求，規劃需要學習的技能。
+                                        </div>
+                                    </li>
+                                    <hr>
+                                    <li>原有技能的相關性：
+                                        <br>
+                                        <div>
+                                            像我原先是設計業，發現與程式結合，有更多可能性！選擇提升原有價值與結合可能性，也是判斷因素。
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cards--content">
+                            <div class="cards--title">評估技術實用性</div>
+                            <hr>
+                            <div class="cards--text">
+                                <ul>
+                                    <li>基層技術：
+                                        <br>
+                                        <div>
+                                            統整職務的技術需求，以及職業學習地圖，可歸納出基層的通用技術如（HTML、CSS、JS、Jquery、ChatGPT...）
+                                        </div>
+                                    </li>
+                                    <hr>
+                                    <li>進階技術：
+                                        <br>
+                                        <div>
+                                            利用論壇發問或是進階線上課程規劃，也是選擇技能與規劃的參考。
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a href="index.html"><button class="homekey" a href="index.html">Go to Top</button></a>
+                </div>
+            </div>
+            <div class="container">
+                <!--QA1布局-->
+                <div class="container__background bg6"></div>
+                　<div class="container__outer">
+                    <div class="container__item">
+                        <!--QA1內容布局-->
+                        <div class="container__text--title">
+                            <!--QA1邊界-->
+                            <h1 id="Q6">Question 06 | 描述一件負面情緒的經歷，如何處理該情緒？</h1>
+                        </div>
+                        <hr>
+                        <div class="container__text--contents">
+                            <div class="content">
+                                <p>曾替一場高爾夫球賽式設計整個活動主視覺與周邊宣傳品，中間發生了下面的問題，整個計畫時間來回持續3個多月（包含後續製作）：
+                                </p>
+                                <ul>
+                                    <li>活動廠商活動資訊（如分組、各活動人員、與會名單）延遲給出，壓縮製作期限。</li>
+                                    <li>給出的資料有誤（例如人名...）導致無效修改。</li>
+                                    <li>主辦想法很多，造成後續追加許多計畫外宣傳品項。</li>
+                                </ul>
+                                <p>當時看到一個花了45天行走朝聖之路的紀錄片，生活不只工作，花個幾分鐘或一下午時間去運動攝影，記錄生活感受，轉換當下負能量。
+                                </p>
+                                <p>當時花一個下午的時間去淡水河攝影，坐在長椅上捋清問題：
+                                </p>
+                                <ul>
+                                    <li>
+                                        因為製作期壓縮，而焦慮易錯的部分：
+                                        <div>規劃製作的緩急，比較容易出錯的資訊，確定風格走向，再與對方校對資訊。</div>
+                                    </li>
+                                    <li>
+                                        主辦方沒有明確的活動框架與藍圖，：
+                                        <div>決定主視覺後，藉由討論活動流程佈置，決定後續宣傳品製作，一是替業主捋清方向，二是收束業主的奇思妙想。</div> 　　
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="index.html"><button class="homekey" a href="index.html">Go to Top</button></a>
+                    </div>
+                    <div class="container__space"></div>
+                </div>
+            </div>
+            <div class="container">
+                <!--QA1布局-->
+                <div class="container__background bg7"></div>
+                <div class="container__itemQ3">
+                    <!--QA1內容布局-->
+                    <div class="container__text--title">
+                        <!--QA1邊界-->
+                        <h1 id="Q7">Question 07 | 關於這份申請網頁，分享一個開發時的技術心得</h1>
+                    </div>
+                    <div class="container__block">
+                        <div class="block--title">
+                            <div class="cards--title">
+                                廣告輪播<br>
+                                JS showSlide
+                            </div>
+                        </div>
+                        <div class="block--content">
+                            <div class="cards--title">基礎框架</div>
+                            <hr>
+                            <div class="cards--text">
+                                <div>原先使用JS showSlide設置</div>
+                                <div>JavaScript Code：<br>
+                                    function showSlide(index){} </div>
+                                <hr>
+                                <div>showSlide程式邏輯</div>
+                                <ul>
+                                    <li>querySelectorAll<br>
+                                        回傳類陣列Nodelist > 透過索引存取
+                                    </li>
+                                    <li>條件設置<br>
+                                        <div>
+                                            if (index >= totalSlides) currentIndex = 0; <br>
+                                            當值大於總值 - 至第一張圖
+                                        </div>
+                                        <div>
+                                            if (index < 0) currentIndex=totalSlides -1;<br>
+                                                當值為負數 - 至最後一張
+                                        </div>
+                                    </li>
+                                    <li>輪轉方式<br>
+                                        document.querySelector (‘.carousel-slide’).style.transform
+                                        =‘translate(${-currentIndex * 100}%)’<br>
+                                        透過 CSS transfor 實現輪轉
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="block--content">
+                            <div class="cards--title">改善問題</div>
+                            <hr>
+                            <div class="cards--text">
+                                <div>參考實際網站與GPT建議優化方向</div>
+                                <li>管理優化-data控制、JS配置邏輯 </li>
+                                <li>索引值範圍-index取餘數值</li>
+                                <hr>
+                                <div>改動與優化技術</div>
+                                <ul>
+                                    <li>data-*標籤與JS配置：<br>
+                                        利用API概念，HTML data-*存取數值、JS 驅動配置
+                                    </li>
+                                    <li>合法索引：<br>
+                                        透過取餘數值折合回到合法索引範圍
+                                    </li>
+                                    <li>初始化確保執行：<br>
+                                        addEventListener - 監聽事件<br>
+                                        DOMContentLoaded - 加載事件<br>
+                                        .forEach - 選擇符合元素<br>
+                                        initializeCarousel - 初始化
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="block--content">
+                            <div class="cards--title">優化方案</div>
+                            <hr>
+                            <div class="cards--text">
+                                <div>根據ChatGPT的優化方案</div>
+                                <div>
+                                    <ul>
+                                        <li>
+                                            initializeCarousel 確保初始化進行
+                                        </li>
+                                        <li>
+                                            data-*標籤與JS配置
+                                        </li>
+                                        <li>
+                                            setSlide 輪播移動邏輯
+                                        </li>
+                                    </ul>
+                                </div>
+                                <hr>
+                                <div>更動後的程式邏輯</div>
+                                <ul>
+                                    <li>
+                                        function initializeCarousel(){}：每次執行輪播初始化
+                                    </li>
+                                    <li>
+                                        data-*標籤控制：<br>
+                                        const autoplay - 自動輪播控制<br>
+                                        const speed - 輪播速率<br>
+                                    </li>
+                                    <li>
+                                        setSlide 程式邏輯：<br>
+                                        index + slide.length - 可以確保index為正確的值，即使index是負數<br>
+                                        %slide.length - 取餘數確保落在正確值
+                                    </li>
+                                    <li>
+                                        自動播放：<br>
+                                        if(autoplay){} - 自動播放啟動時<br>
+                                        setInterval() - 執行程式setSlide行為<br>
+                                        current=1 - 下一張圖片<br>
+                                        speed - 停留秒數
+                                    </li>
+                                    <li>
+                                        確保初始化進行：<br>
+                                        addEventListener 監聽事件<br>
+                                        DOMContentLoaded DOM加載後觸發(優化執行)<br>
+                                        querySelectorAll 選取所有符合條件的元素<br>
+                                        .forEach() 確認每個元素後才開始執行 initializeCarousel 初始化程式
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container__block">
+                        <div class="block--title">
+                            <div class="cards--title">
+                                技術心得<br>
+                                Reflection
+                            </div>
+                        </div>
+                        <div class="block--digest">
+                            <div class="cards--title">基礎框架</div>
+                            <hr>
+                            <div class="cards--text">
+                                <li>／＊功能／
+                                    原先以JS showSlide為基礎修改，嘗試以data-*標籤控制，發現撰寫的JS函數影響，所以求助ChatGPT。
+                                </li>
+                                <li>
+                                    與shoeSlide不同，ChatGPT給出的方案，底層邏輯同樣是透過索引控制，但撰寫的邏輯卻不同。</li>
+                                <li>
+                                    比對兩種辦法，一開始得程式邏輯較容易理解執行方式（索引與if條件），但GPT的方案則是濃縮代碼，優化整體表現。
+                                </li>
+                                <li>
+                                    這次學習技術，見識到兩種底層邏輯相同，但撰寫函數不同的程式與優化方式
+                                    ，是挑戰卻也有趣。
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="index.html"><button class="homekey" a href="index.html">Go to Top</button></a>
+                </div>
+            </div>
+            <div class="container">
+                <!--QA1布局-->
+                <div class="container__background bg8"></div>
+                　<div class="container__outer">
+                    <div class="container__item">
+                        <!--QA1內容布局-->
+                        <div class="container__text--title">
+                            <!--QA1邊界-->
+                            <h1 id="Q8">Question 08 | 如何看待自身工作和整個社會群體的連結關係?</h1>
+                        </div>
+                        <hr>
+                        <div class="container__text--contents">
+                            <div class="content">
+                                <p>短期目標作為設計與前端工程師為轉職目標</p>
+                                <p>
+                                <div>前端開發職責：了解人類行為與後端所需資料，透過程式應用的運作，連結人機互動，創造體驗與改善問題。</div>
+                                <div>我認為對使用者互動的敏銳度與解決問題的本質，是前端的核心，理解人機互動、設計無痛體驗、收集並改善應用。</div>
+                                </p>
+                                <p>
+                                <div>前端維護職責：環境技術持續更新，兼容性、效率、演算法不斷變化，只有持續優化與除錯，才能符合用戶，維持應用的價值。</div>
+                                <div>程式的擴充與維護，維持應用才能持續發揮影響力，是工程師必須知道的</div>
+                                </p>
+                                <p>
+                                    對於工程師與社會群體連結
+                                <div>解決問題是前端本質：</div>
+                                <div>工程師的核心是解決問題，從開發到維護始終如此，問題分析、解題策略、創造體驗，都是解題的工具或流程。
+                                </div>
+                                <div>工程師提出解題成果，影響體驗，改變使用者的生活型態，我認為此工作與社會群體的連結。
+                                </div>
+                                </p>
+                            </div>
+                        </div>
+                        <a href="index.html"><button class="homekey" a href="index.html">Go to Top</button></a>
+                    </div>
+                    <div class="container__space"></div>
+                </div>
+            </div>
+            <div class="container">
+                <!--QA1布局-->
+                <div class="container__background bg9"></div>
+                　<div class="container__outer">
+                    <div class="container__item">
+                        <!--QA1內容布局-->
+                        <div class="container__text--title">
+                            <!--QA1邊界-->
+                            <h1>Question 09 | 從上次提出申請至今，做的努力</h1>
+                        </div>
+                        <hr>
+                        <div class="container__text--contents">
+                            <div class="content">
+                                <div class="content--title">概念的進步：
+                                </div>
+                                <p>
+                                    先前學習前端時，還沒接觸到框架概念，只是以基礎的HTML、CSS、RWD的練習為主，這次嘗試加入JS交互與透過框架概念來建立此次的申請履歷。
+                                </p>
+                                <div class="content--title">學習的過程：
+                                </div>
+                                <p>
+                                    先前是依靠Udemy入門課程與GPT加深學習知識，直到現在以實際案例作為主題學習，找一份電商網站、餐廳網頁，再去分析技術，再透過論壇與文章，給自己建立一個個小主題去學習。此次網站結構，是透過電商網站的框架概念嘗試撰寫，算是從基礎逐漸深入前進。
+                                </p>
+                                <div class="content--title">前端的理解：
+                                </div>
+                                <p>
+                                    自學過程中，透過工具持續解決問題，對於所學的技術與細節也更清晰。在程式的知識海，總會碰到茫然或不適當的認知，利用設計中常給出的問題：我的角色是什麼？／問題是什麼？／目標群體的角度是什麼？／解決方案真的合適嗎？／該怎麼測試解決？
+                                </p>
+                                <p>認清方向與核心問題，才能逐步解決。</p>
+                            </div>
+                        </div>
+                        <a href="index.html"><button class="homekey" a href="index.html">Go to Top</button></a>
+                    </div>
+                    <div class="container__space"></div>
+                </div>
+            </div>
+            <div class="container">
+                <!--QA1布局-->
+                <div class="container__background bg10"></div>
+                　<div class="container__outer">
+                    <div class="container__item">
+                        <!--QA1內容布局-->
+                        <div class="container__text--title">
+                            <!--QA1邊界-->
+                            <h1 id="Q10">Question 10 | 想對 WeHelp 說的話</h1>
+                        </div>
+                        <hr>
+                        <div class="container__text--contents">
+                            <div class="content">
+                                <div class="content--title">想對WeHelp說：
+                                </div>
+                                <p>
+                                    WeHelp與彭彭老施的頻道，提供了很大的幫助，不論是影片還是練習習題，對入門時期的階段給了一個方向，從第4屆開始就開始看每屆的成果發表，看到一樣是在努力並成功的學員，讓自己在自學轉職的路上也多了一份動力。
+                                </p>
+                                <p>
+                                    能透過課程與在職工程師請教，是很難得的經驗，也是想要得到的機會，不論結果如何，轉職前端工程師是自己訂下的規劃，是確定要執行的下一步。
+                                </p>
+                                <p>
+                                    感謝WeHelp團對人員花時間看完這一份網頁履歷，如果能有幸得到您的評論感想，會非常感激!
+                                </p>
+                            </div>
+                        </div>
+                        <a href="index.html"><button class="homekey" a href="index.html">Go to Top</button></a>
+                    </div>
+                    <div class="container__space"></div>
+                </div>
+            </div>
+
+            <footer class="site-footer">
+                <div id="footer-inner" class="clr">
+                    <div class="footerInner-bottom">
+                        <div class="footerInner-text">
+                            <ul>
+                                <li>聯絡方式(Email)：ysp58014@gmail.com／ziv.designmate@gmail.com</li>
+                                <li>聯絡方式(Mobile)：0988-540-485</li>
+                            </ul>
+                        </div>
+                        <botton class="homekey"><a href="index.html">HOME</a>
+                        </botton>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+</body>
+
+</html>

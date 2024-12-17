@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <style>
+      .\31 f3af46e-fea7-4f44-af77-94ab3e9db73d {
+        fill: #231815;
+      }
+
+      .\36 ecf29c0-1a3e-446b-93e4-b8941ce71e9c, .\39 09aa225-a838-4f67-8977-7fafc67f1302 {
+        fill: none;
+        stroke: #231815;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .\36 ecf29c0-1a3e-446b-93e4-b8941ce71e9c {
+        stroke-width: 9.87px;
+      }
+
+      .\39 09aa225-a838-4f67-8977-7fafc67f1302 {
+        stroke-width: 10px;
+      }
+    </style>
+  </defs>
+  <title>icon-svg</title>
+  <g id="32ee8b6c-4e12-45e4-aa65-5d0b80df19e0" data-name="burgerList_line">
+    <g>
+      <path class="1f3af46e-fea7-4f44-af77-94ab3e9db73d" d="M128,9.58A118,118,0,0,1,211.44,211,118,118,0,0,1,44.56,44.14,117.26,117.26,0,0,1,128,9.58m0-10a128,128,0,1,0,128,128A128,128,0,0,0,128-.42Z"/>
+      <line class="6ecf29c0-1a3e-446b-93e4-b8941ce71e9c" x1="84.88" y1="93.5" x2="209.88" y2="93.5"/>
+      <line class="909aa225-a838-4f67-8977-7fafc67f1302" x1="47.71" y1="93.5" x2="67.71" y2="93.5"/>
+      <line class="6ecf29c0-1a3e-446b-93e4-b8941ce71e9c" x1="84.88" y1="127.58" x2="209.88" y2="127.58"/>
+      <line class="909aa225-a838-4f67-8977-7fafc67f1302" x1="47.71" y1="127.58" x2="67.71" y2="127.58"/>
+      <line class="6ecf29c0-1a3e-446b-93e4-b8941ce71e9c" x1="84.88" y1="161.67" x2="209.88" y2="161.67"/>
+      <line class="909aa225-a838-4f67-8977-7fafc67f1302" x1="47.71" y1="161.67" x2="67.71" y2="161.67"/>
+    </g>
+  </g>
+</svg>

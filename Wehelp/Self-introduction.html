@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <title>WeHelp!Self-introduction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <style typel="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        /*技術點1:多重背景寫法(不是用bc)*/
+        body {
+            background-image: url(./img/background.jpg);
+        }
+
+        .banner {
+            width: 100%;
+            height: auto;
+            background: linear-gradient(115deg, #003D79 50%, transparent 50%) center center / 100% 100%,
+                url("./img/banner.JPG") right center / auto 100%;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1440px;
+            height: 100%;
+            margin: auto;
+            padding: 1em;
+        }
+
+        .banner-txt {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+
+            padding: auto;
+            padding-left: 5%;
+        }
+
+        .banner-txt h1 {
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 68px;
+            font-weight: 900px;
+            color: #fff;
+            border-bottom: 1px solid #fff;
+            padding-bottom: .2em;
+            margin-bottom: .2em;
+        }
+
+        .banner-txt h2 {
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 36px;
+            font-weight: 500px;
+            color: #fff;
+        }
+
+        .banner-txt p {
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 17px;
+            font-weight: 300px;
+            color: #fff;
+        }
+
+        .copyright {
+            width: 100%;
+            text-align: center;
+            font-family: "Noto Sans TC", sans-serif;
+            padding: 10px 0;
+            background-color: #000;
+            color: #fff;
+            box-shadow: 0 10px 5px 0px rgba(0, 0, 0, 1);
+        }
+
+        .wrap {
+            width: 100%;
+            position: relative;
+            color: #000;
+            border: 1px solid #000;
+            overflow: hidden;
+            box-shadow: 0 10px 5px 0px rgb(106, 146, 153);
+        }
+
+        .wrap::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            background-image: url(./img/wrapbackground.jpg);
+            filter: blur(5px);
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+
+            background-clip: padding-box;
+        }
+
+        .wrap-title {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .wrap-title h1 {
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 42px;
+            font-weight: 900px;
+            color: #fff;
+            padding: .2em;
+        }
+
+        .wrap-container {
+            width: 100%;
+            max-width: 1440px;
+            display: flex;
+            text-align: center;
+            margin: auto;
+            padding-bottom: 10px;
+        }
+
+        .item {
+            width: 438px;
+            margin: 20px;
+            text-align: center;
+            background-color: #fff;
+            border: 1px solid #000;
+            transform: translateY(0px);
+            transition: .5s;
+        }
+
+        .item:hover {
+            transform: translateY(-20px);
+            background-image: linear-gradient(-30deg, #003D79, #002953);
+            color: #fff;
+        }
+
+        .item .pic {
+            width: 100%;
+            height: 320px;
+        }
+
+        .item .pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            vertical-align: middle;
+        }
+
+        .item .pic img:sec-child {
+            margin-left: 0;
+        }
+
+        .item .txt {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            padding: 20px;
+        }
+
+        .item .txt h2 {
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 32px;
+            font-weight: 500px;
+            border-bottom: 1px solid #000;
+            padding-bottom: .3em;
+            margin-bottom: .3em;
+        }
+
+        .item .txt p {
+            line-height: 1.6;
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 16px;
+            font-weight: 300px;
+        }
+
+        .main {
+            width: 100%;
+            max-width: 1400px;
+            margin: auto;
+            position: relative;
+
+            background-clip: padding-box;
+            overflow: hidden;
+        }
+
+        .main::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            background-image: url(./img/mainbackground.JPG);
+            filter: blur(10px);
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+            background-clip: padding-box;
+            overflow: hidden;
+        }
+
+        .main-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .main-item .main-pic {
+            width: 32%;
+            height: 250px;
+        }
+
+        .main-item .main-txt {
+            width: 70%;
+            height: 228px;
+            padding: 10px 20px 10px 20px;
+            border: 1px solid #ccc;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .main-item .main-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            vertical-align: middle;
+        }
+
+        .main-item .main-txt h2 {
+            font-family: "Noto Sans TC", sans-serif;
+            font-weight: 300px;
+            border-bottom: .5px solid #ccc;
+            padding-bottom: .2em;
+            margin-bottom: .3em;
+        }
+
+        .main-item .main-txt h2 span {
+            font-size: smaller
+        }
+
+        .main-item .main-txt p {
+            font-family: "Noto Sans TC", sans-serif;
+            font-weight: 100px;
+            padding-bottom: .1em;
+            margin-bottom: .1em;
+        }
+
+        .no-clear {
+            clear: none;
+            /* 禁用 clear 属性 */
+        }
+
+        table {
+            border: 1px solid #002953;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <div class="container">
+            <div class="banner-txt">
+                <h1>關於履歷作品</h1>
+                <h2>ZIV INTRODUCTION</h2>
+                <p>5th WeHelp Bootcamp! 應徵履歷</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        Copyright &copy; 2024 ZIV INTRODUCTION WEBSIDE.<br>
+        <a href="index.html">back to 6th WeHelp Bootcamp!應徵履歷</a>
+    </div>
+
+    <div class="wrap">
+        <div class="wrap-title">
+            <h1>區域快捷</h1>
+        </div>
+        <div class="wrap-container">
+            <div class="item">
+                <div class="pic">
+                    <img src="./img/introwrap00.JPG">
+                </div>
+                <div class="txt">
+                    <h2>關於"我"</h2>
+                    <p>喜愛旅拍的設計師<br>
+                        對未知的事物好奇<br>
+                        對製作的過程熱愛
+                    </p>
+                    <a href="#target01" class="btn">more</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="pic">
+                    <img src="./img/introwrap01.JPG">
+                </div>
+                <div class="txt">
+                    <h2>關於"未來"</h2>
+                    <p>初衷:科技與互動的探索<br>
+                        (某次找功能找到握拳的憤怒)<br>
+                        互動產品之導向(如影音或課程)
+                    </p>
+                    <a href="#target02" class="btn">more</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="pic">
+                    <img src="./img/introwrap02.JPG">
+                </div>
+                <div class="txt">
+                    <h2>關於"決心"</h2>
+                    <p>目前程式以自主學習為主<br>
+                        應徵動機:有更為清晰的區塊導向
+                    </p>
+                    <a href="#target03" class="btn">more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="main-item">
+            <div class="main-pic">
+                <img src="./img/main01.jpg">
+            </div>
+            <div class="main-txt" id="target01">
+                <h2>個人簡介
+                    <span>Personal profile</span>
+                </h2>
+                <p>我是一名喜愛旅拍的業餘攝影愛好者，名字是Ziv蔡丞皓。<br>
+                    &emsp;轉職前為平面與企畫設計，副業經營接案工作室－對於接案設計人最重要的，大概就是肝了吧！<br>
+                    &emsp;因為接案得緣故，得以接觸UI介面設計，好奇於與使用者的互動性，又很喜歡動手製作，於是就開始自學程式。<br>
+                    &emsp;孵化作品的過程很享受：腦力激盪、邏輯設計和成品的成就感，這些都是熱愛的理由。<br>
+
+
+
+
+                </p>
+            </div>
+        </div>
+        <div class="main-item">
+            <div class="main-txt">
+                <h2>負面情緒處理
+                    <span>Emotion Management</span>
+                </h2>
+                <p>負面情緒事故150%大概都來自設計上無止盡的修改(笑):<br>
+                    <ui>
+                        自己有一個處理SOP流程
+                        <li>1.&emsp;暫時離開氛圍。</li>
+                        <li>2.&emsp;享受15min個人teatime。</li>
+                        <li>3.&emsp;利用15~30min:teatime+整理思錄列表。</li>
+                        <l1>4.&emsp;按照思錄列表，嘗試溝通解決問題。</l1>
+                        <li>5.&emsp;整理新疑問，再重複3-4步驟。</li>
+                    </ui>
+                </p>
+            </div>
+            <div class="main-pic">
+                <img src="./img/main02.jpg">
+            </div>
+        </div>
+        <div class="main-item">
+            <div class="main-pic">
+                <img src="./img/main03.jpg">
+            </div>
+            <div class="main-txt">
+                <h2>最重要的人際交往原則
+                    <span>Interpersonal Principles</span>
+                </h2>
+                <p>個人立場不同，可以捍衛觀點，也可以融入觀點。<br>
+                    一百人有一百種哈姆雷特，觀點不同時，溝通永遠在情緒之前。<br>
+                    任何方案都可以做商討，再以尊重前提之下。
+                </p>
+            </div>
+        </div>
+        <div class="main-item">
+            <div class="main-txt" id="target02">
+                <h2>成為軟體工程師的努力
+                    <span>Striving to Become</span>
+                </h2>
+                <p>從去年離職到今年過了半年時間學習歷程：
+                <ul>
+                    <li>1.&emsp;視頻學習:彭彭老師頻道.&nbsp;(入門影片HTML、CSS系列/RWD、Js仍在學習中)</li>
+                    <li>2.&emsp;視頻學習:CSSCoke頻道.&nbsp;(入門實作HTML基礎影片、切版實作)</li>
+                    <li>3.&emsp;IT文章論談:IT鐵人賽(HTML、CSS等文章，多半為找資料使用)</li>
+                    <l1>4.&emsp;建立HTML與CSS站寫基礎框架(此網站)+逐步添加小互動(CSS)</l1>
+                </ul>
+                </p>
+            </div>
+            <div class="main-pic">
+                <img src="./img/main04.JPG">
+            </div>
+        </div>
+        <div class="main-item">
+            <div class="main-pic">
+                <img src="./img/main05.JPG">
+            </div>
+            <div class="main-txt">
+                <h2>學習安排
+                    <span>Study Plan</span>
+                </h2>
+                <table class="no-clear">
+                    <tr>
+                        <td><b>階段/項目&emsp;</b></td>
+                        <td><b>課程目標&emsp;</b></td>
+                        <td><b>自主學習&emsp;</b></td>
+                    </tr>
+                    <tr>
+                        <td><b>開課前</b></td>
+                        <td></td>
+                        <td>JavaScript基礎概念+CSS切版與撰寫框架</td>
+                    </tr>
+                    <tr>
+                        <td><b>第一階段</b></td>
+                        <td>進度一</td>
+                        <td>RWD撰寫架構建置、Python.JS知識熟練<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>第二階段</b></td>
+                        <td>進度二</td>
+                        <td>自主目標:三階段 映像互動網頁（頁面、互動、會員之系統雛形）</td>
+                    </tr>
+                    <tr>
+                        <td><b>第三階段</b></td>
+                        <td>進度三</td>
+                        <td>自主目標:影音相關技術的學習與完善網頁設計</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="main-item">
+            <div class="main-txt">
+                <h2>未來藍圖&公司
+                    <span>Future Blueprint</span>
+                </h2>
+                <p>
+                <ul>
+                    <b>影音與互動設計相關公司</b>
+                    <li><b>1.也樂設計有限公司-前端設計師</b><br>
+                        &emsp;性質為展場互動設計與網頁互動相關設計領域職務。</li>
+                    <li><b>2.Gila Cloud-前端工程師</b><br>
+                        &emsp;性質為影音網頁模板套用，須熟悉Vue、HTML等套用模板技術，可接觸不同面向之功能。
+                    </li>
+                    <li>
+                    </li>
+                </ul>
+                </p>
+            </div>
+            <div class="main-pic">
+                <img src="./img/main06.JPG">
+            </div>
+        </div>
+        <div class="main-item">
+            <div class="main-pic">
+                <img src="./img/main07.jpg">
+            </div>
+            <div class="main-txt" id="target03">
+                <h2>至上次提出申請時的努力
+                    <span>Results of My Hard Work</span>
+                </h2>
+                <p>上次對於HTML架構、CSS概念還未清楚，只以黑底與文字建構網頁，這次
+                    嘗試將練習過的排版（滿版banner、小小互動性卡片、橫式排版設計）
+                    與HTML、CSS框架雛形做撰寫利用，雖仍有很細節的不足，但還是有小有成就感！
+                </p>
+            </div>
+        </div>
+        <div class="main-item">
+            <div class="main-txt">
+                <h2>網頁技術心得
+                    <span>Technical Experiences</span>
+                </h2>
+                <p>
+                <ul>各版塊技術心得
+                    <li>滿版板塊：雙層背景撰寫、linear-gradient斜角色塊</li>
+                    <li>區域快捷：z軸背景模糊設定、transform動畫互動、快捷連結、圖片處理(裁切易出與畫面適應)</li>
+                    <li>橫式板塊：flex橫式版式、偽類before元素</li>
+                </ul>
+                </p>
+            </div>
+            <div class="main-pic">
+                <img src="./img/main08.jpg">
+            </div>
+        </div>
+        <div class="main-item">
+            <div class="main-pic">
+                <img src="./img/main09.jpg">
+            </div>
+            <div class="main-txt">
+                <h2>其他
+                    <span>Others</span>
+                </h2>
+                <p>經過幾個月的自學，最後仍決定嘗試應徵課程，不論結果如何，仍會繼續學習程式。<br>
+                    即使工程師是條需要不斷學習的道路，但寫程式的過程真的享受，所以會繼續下去。<br>
+                    深知自己沒什麼經驗與資歷，但慢慢走還是可以到達目標，彭彭老師頻道帶領我入門
+                    奠定程式基礎，期望可以參與課程，成為團隊的新成員，繼續前進。
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
