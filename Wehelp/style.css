@@ -24,6 +24,47 @@
     /* 数字 */
 }
 
+.bg1 {
+    background-image: url('indexImg/IMG_162820.jpg');
+}
+
+
+.bg2 {
+    background-image: url('indexImg/IMG_3341.JPG');
+}
+
+.bg3 {
+    background-image: url('indexImg/IMG_5091.JPG');
+}
+
+.bg4 {
+    background-image: url('indexImg/IMG_4984.JPG');
+}
+
+.bg5 {
+    background-image: url('indexImg/IMG_3347.JPG');
+}
+
+.bg6 {
+    background-image: url('indexImg/IMG_2928.jpg');
+}
+
+.bg7 {
+    background-image: url('indexImg/IMG_3084.JPG');
+}
+
+.bg8 {
+    background-image: url('indexImg/IMG_2480.JPG');
+}
+
+.bg9 {
+    background-image: url('indexImg/IMG_2516.jpg');
+}
+
+.bg10 {
+    background-image: url('indexImg/IMG_3317.JPG');
+}
+
 body,
 ul,
 li {
@@ -342,47 +383,6 @@ a img {
 a:hover img {
     opacity: 0.8;
     /* 鼠标悬停时变透明 */
-}
-
-.bg1 {
-    background-image: url('indexImg/IMG_162820.jpg');
-}
-
-
-.bg2 {
-    background-image: url('indexImg/IMG_3341.JPG');
-}
-
-.bg3 {
-    background-image: url('indexImg/IMG_5091.JPG');
-}
-
-.bg4 {
-    background-image: url('indexImg/IMG_4984.JPG');
-}
-
-.bg5 {
-    background-image: url('indexImg/IMG_3347.JPG');
-}
-
-.bg6 {
-    background-image: url('indexImg/IMG_2928.jpg');
-}
-
-.bg7 {
-    background-image: url('indexImg/IMG_3084.JPG');
-}
-
-.bg8 {
-    background-image: url('indexImg/IMG_2480.JPG');
-}
-
-.bg9 {
-    background-image: url('indexImg/IMG_2516.jpg');
-}
-
-.bg10 {
-    background-image: url('indexImg/IMG_3317.JPG');
 }
 
 h1 {
