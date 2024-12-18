@@ -19,7 +19,7 @@ const marqueeText = document.querySelector('.marquee-text');
 let offset = marqueeContainer.offsetWidth;
 
 function updateWidth() {
-    // 动态更新容器和文字的宽度
+    // 動態更新容器與文字寬度
     offset = marqueeContainer.offsetWidth;
 }
 function scrollMarquee() {
@@ -30,7 +30,7 @@ function scrollMarquee() {
     marqueeText.style.transform = `translateX(${offset}px)`;
     requestAnimationFrame(scrollMarquee);
 }
-// 窗口大小变化时重新计算宽度
+// 窗口大小變換時重新計算
 window.addEventListener('resize', updateWidth);
 scrollMarquee();
 
@@ -44,16 +44,10 @@ function initializeCarousel(carousel) {
     const slides = Array.from(slider.children);
     let currentIndex = 0;
 
-    //const viewport = carousel.querySelector('.flickity-viewport');
-    //const slider = carousel.querySelector('.flickity-slider');
-    //const slides = slider.children;
-    //let currentIndex = 0;
-
     slider.setAttribute('aria-hidden', 'false');
 
     const setSlide = (index) => {
         currentIndex = (index + slides.length) % slides.length;
-        // 支持循环滚动
         slider.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
     // 自動播放功能
@@ -72,13 +66,7 @@ function initializeCarousel(carousel) {
         }
     }
 }
-//if (autoplay) {
-//    setInterval(() => moveToNextSlide(slider, slides, ++curentIndex), speed)};
-//if (arrows) {
-//    addArrowsButtons(carouse, slider, slides, () => currentIndex--, () => currentIndex++);}
 
-// 添加箭頭
-//初始化所有輪播組件
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[id^="heroImage-slideshow"]').forEach(initializeCarousel);
 });

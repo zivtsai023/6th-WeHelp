@@ -7,21 +7,21 @@
     font-family: 'CustomFontCN';
     src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC');
     unicode-range: U+4E00-9FFF;
-    /* 中文字符范围 */
+    /* 中文字符 */
 }
 
 @font-face {
     font-family: 'CustomFontEN';
     src: url('https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap');
     unicode-range: U+0020-007F;
-    /* 英文字母和符号 */
+    /* 英文字母和符號 */
 }
 
 @font-face {
     font-family: 'CustomFontNum';
     src: url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
     unicode-range: U+0030-0039;
-    /* 数字 */
+    /* 數字 */
 }
 
 .bg1 {
@@ -86,7 +86,6 @@ body {
 
 #header {
     width: 100%;
-    /*JS功能*/
 }
 
 .header__stricky-wrapper {
@@ -167,7 +166,6 @@ body {
 }
 
 .header-item--textcenter li {
-    /*高度設定問題:display: RWD邏輯思維*/
     height: auto;
     margin: auto 0;
     text-align: center;
@@ -245,22 +243,12 @@ body {
     transition: transform 0.5s ease-in-out;
     width: 100%;
     height: 100%;
-    /*為什麼這樣設定?*/
 }
-
-/*
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-*/
 
 .hero__item {
     display: flex;
     flex: 0 0 100%;
-    /*每張圖片占滿整個容器寬度*/
     align-items: center;
-    /*與容器高度一至*/
 }
 
 .hero__image-wrapper {
@@ -371,9 +359,7 @@ bottom: 0;
 a:hover,
 a:focus {
     color: gray;
-    /* 滑鼠懸停時改變顏色 */
     text-decoration: underline;
-    /* 可選：懸停時加下劃線 */
 }
 
 a img {
@@ -382,7 +368,6 @@ a img {
 
 a:hover img {
     opacity: 0.8;
-    /* 鼠标悬停时变透明 */
 }
 
 h1 {
@@ -656,14 +641,6 @@ a:hover {
     font-weight: var(--footer-fontWeight);
     letter-spacing: var(--footer-letter-spacing);
 }
-
-/*
-#svg_burgerlistIcon {
-    position: relative;
-    確保能被設定 z-index
-    z-index: 11;
-    提高優先顯示層級
-}*/
 
 :root {
     --colorBackBody: #ffffff;
